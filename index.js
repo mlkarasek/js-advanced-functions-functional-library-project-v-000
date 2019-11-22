@@ -23,8 +23,8 @@ const fi = (function() {
       return newCollection;
     },
 
-    reduce: function() {
-
+    reduce: function(collection, callback, startValue) {
+      let balues = Object.values(collection);
     },
 
     functions: function() {
