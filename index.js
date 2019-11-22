@@ -25,6 +25,13 @@ const fi = (function() {
 
     reduce: function(collection, callback, startValue) {
       let balues = Object.values(collection);
+      let accumulator = !!startValue ? startValue : values[0];
+      let i = !!startValue ? 0 : 1;
+
+      for (i; i < values.length; i++) {
+        accumulator = callback(accumulator, values[1], values);
+      };
+      return accumulator;
     },
 
     functions: function() {
